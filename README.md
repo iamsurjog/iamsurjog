@@ -1,7 +1,8 @@
 # Sujatro
 
 > Here’s the thing about time: If you can’t make the most out of any given moment, then you don’t deserve a single extra second.
->> - Ekko
+
+\- Ekko
 
 ```
 ███████╗██╗   ██╗    ██╗ █████╗ ████████╗██████╗  ██████╗ 
