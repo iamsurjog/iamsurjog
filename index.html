@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sujatro Ganguli</title>
+        <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    </head>
+    <script>
+        // Apply theme before page render to avoid flash
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === null) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            console.log(document.documentElement.getAttribute('data-theme') + "IS SET")
+        }
+    </script>
+    <body>
+        <div id="hist"></div>   
+        <form id="cmd" autocomplete="off">
+            <label for="text">$</label>
+            <input type="text" name="cmd" value="" id="cmdline">
+        </form>
+    </body>
+    <script>
+
+
+
+        // Add a click event listener to the document.body
+        document.onclick = function(){
+            console.log("clicked")
+            document.getElementById("cmdline").focus()
+        }
+
+        // Console handling
+        var hist = ""
+        const myForm = document.getElementById("cmd");
+
+        myForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(myForm); // Creates a FormData object from the form
+
+            // Access individual values
+            const message = formData.get("cmd");
+            hist = hist + "<p class=\"question\">$ " + message + "</p>"
+            switch(message){
+                case "clear":
+                    hist = ""
+                    break
+                case "whoami":
+                    hist = hist + "<p class=\"answer\">" + "Sujatro Ganguli" + "</p>"
+                    break
+                case "gui":
+                    console.log(window.location.href)
+                    window.location.href = window.location.href + "/gui.html"
+                    break
+                case "light":
+                    document.documentElement.setAttribute('data-theme', 'light');
+                    hist = hist + "<p class=\"answer\">" + "Theme set to " + document.documentElement.getAttribute('data-theme') + "</p>"
+                    break
+                case "dark":
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    hist = hist + "<p class=\"answer\">" + "Theme set to " + document.documentElement.getAttribute('data-theme') + "</p>"
+                    break
+                case "green-dark":
+                    document.documentElement.setAttribute('data-theme', 'green-dark');
+                    hist = hist + "<p class=\"answer\">" + "Theme set to " + document.documentElement.getAttribute('data-theme') + "</p>"
+                    break
+                case "green-light":
+                    document.documentElement.setAttribute('data-theme', 'green-light');
+                    hist = hist + "<p class=\"answer\">" + "Theme set to " + document.documentElement.getAttribute('data-theme') + "</p>"
+                    break
+                case "red-dark":
+                    document.documentElement.setAttribute('data-theme', 'red-dark');
+                    hist = hist + "<p class=\"answer\">" + "Theme set to " + document.documentElement.getAttribute('data-theme') + "</p>"
+                    break
+                case "red-light":
+                    document.documentElement.setAttribute('data-theme', 'red-light');
+                    hist = hist + "<p class=\"answer\">" + "Theme set to " + document.documentElement.getAttribute('data-theme') + "</p>"
+                    break
+                case "ls":
+                    break
+                case "cd resume":
+                    window.location.href = "/cv_general.pdf"
+                    break
+                case "exit":
+                    window.location.href = "about:blank"
+                    break
+                default:
+                    hist = hist + "<p class=\"error\">" + "Command does not exist" + "</p>"
+            }
+            localStorage.setItem('theme', document.documentElement.getAttribute('data-theme'));
+            document.getElementById("hist").innerHTML = hist
+            myForm.reset()
+
+        })
+    </script>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sujatro Ganguli | Personal Portfolio</title>
+    <link rel="stylesheet" href="css/gui_style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        // Apply theme before page render to avoid flash
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark-theme');
+        } else {
+            document.documentElement.classList.add('dark-theme');
+        }
+    </script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <header>
+        <nav class="navbar">
+<div class="theme-switcher">
+  <input type="checkbox" id="theme-toggle" class="theme-toggle-input">
+  <label for="theme-toggle" class="theme-toggle-label">
+    <span class="theme-toggle-slider">
+      <span class="theme-icon">
+        <svg class="sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </span>
+    </span>
+  </label>
+</div>            <div class="nav-links">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animate-text">Hello, I'm <span class="highlight">Sujatro Ganguli</span></h1>
+                    <h2 class="animate-text delay-1">Computer Science Student & Developer</h2>
+                    <p class="animate-text delay-2">Building innovative solutions with AI/ML, web development, and game design.</p>
+                    <div class="cta-buttons animate-text delay-3">
+                        <a href=".\cv_general.pdf" download="resume" class="btn primary-btn">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                    </div>
+                    <div class="social-icons animate-text delay-4">
+                        <a href="https://github.com/iamsurjog/" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sujatro-ganguli-68429328b/" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sujatro.ganguli/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image animate-fade-in">
+                    <div class="image-container">
+                        <div class="background-shape"></div>
+                        <img src="sujatro2.jpg" alt="Profile Photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About <span class="highlight">Me</span></h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Computer Science and Engineering student at VIT University with a strong academic record (CGPA: 8.64). Passionate about AI/ML, web development, and game design with experience in hackathons and real-world projects.</p>
+                        <p>Winner of multiple competitions including Caterpillar Industry Hackathon, Yantra Central Hackathon, and creator of a Python module with 3k+ downloads. Was member of IEEE CS chapter at VIT Vellore.</p>
+                        <div class="personal-info">
+                            <div class="info-item">
+                                <span class="info-title">Name:</span>
+                                <span class="info-value">Sujatro Ganguli</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Email:</span>
+                                <span class="info-value">sujatro.ganguli@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Phone:</span>
+                                <span class="info-value">9874182344</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Education:</span>
+                                <span class="info-value">B.Tech, VIT University (CGPA: 8.59)</span>
+                            </div>
+                        </div>
+                        <a href=".\resumev9.pdf" download="resume" class="btn primary-btn download-btn">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-title">Current Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3000">0</div>
+                            <div class="stat-title">Module Downloads</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-title">Community Service Hours</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="4">0</div>
+                            <div class="stat-title">Competitions Won</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My <span class="highlight">Skills</span></h2>
+                </div>
+                <div class="skills-content">
+                    <div class="skill-categories">
+                        <div class="category active" data-category="technical">Technical</div>
+                        <div class="category" data-category="soft">Hobbies</div>
+                        <div class="category" data-category="languages">Languages</div>
+                    </div>
+                    <div class="skills-list" id="technical">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Python</h3>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>AI/ML</h3>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Web Development</h3>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Game Development</h3>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>SQL/RDBMS</h3>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-list hidden" id="soft">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Programming</h3>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Music</h3>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Reading</h3>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Drama</h3>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-list hidden" id="languages">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>English</h3>
+                                <span class="skill-percentage">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>French</h3>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Hindi</h3>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <h3>Bengali</h3>
+                                <span class="skill-percentage">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="col_container">
+                <div class="section-header">
+                    <h2>My <span class="highlight">Projects</span></h2>
+                </div>
+                <div class="projects-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Development</button>
+                    <button class="filter-btn" data-filter="python">Python</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-item" data-category="web">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project 1">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Hackathon Website</h3>
+                                    <p>Web Development</p>
+                                    <a href="https://storied-tarsier-a3cd46.netlify.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="python">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1580893211123-627e0262be3a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project 2">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Gestualis</h3>
+                                    <p>Python Package</p>
+                                    <a href="https://github.com/iamsurjog/Gestualis" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-item" data-category="python">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1611920504212-25894774afc5?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Project 5">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Origin Shift</h3>
+                                    <p>Maze Algorithm</p>
+                                    <a href="https://github.com/iamsurjog/OriginShift" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="project-item" data-category="web">
+                         <div class="project-image">
+                             <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Project 4">
+                            <div class="project-overlay">
+                                <div class="project-info">
+                                    <h3>Portfolio Website</h3>
+                                    <p>Web Development</p>
+                                    <a href="https://github.com/iamsurjog/README" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                 </div>
+                            </div>
+                         </div>
+                     </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get In <span class="highlight">Touch</span></h2>
+                </div>
+                <div class="contact-content">
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <a class="button contact-details" href="tel:9874182344" target="_blank">
+                                <h3>Phone</h3>
+                                <p>9874182344</p>
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <a class="contact-details" href="mailto:sujatro.ganguli@gmail.com" target="_blank">
+                                <h3>Email</h3>
+                                <p>sujatro.ganguli@gmail.com</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="highlight">Portfolio</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/iamsurjog" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sujatro-ganguli-68429328b/"  target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/sujatro.ganguli/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="js/gui_script.js"></script>
+</body>
+</html>
+

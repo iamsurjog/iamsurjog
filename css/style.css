@@ -1,0 +1,71 @@
+:root[data-theme="red-light"] {
+  --text: #13070a;
+  --background: #faeff1;
+  --primary: #732132;
+  --secondary: #e07b8f;
+  --accent: #c42744;
+}
+:root[data-theme="red-dark"] {
+  --text: #f8ecef;
+  --background: #100507;
+  --primary: #de8c9d;
+  --secondary: #841f33;
+  --accent: #d83b58;
+}
+
+:root[data-theme="green-light"] {
+  --text: #08170a;
+  --background: #e7f8ea;
+  --primary: #187c28;
+  --secondary: #65ec7b;
+  --accent: #0ee132;
+}
+:root[data-theme="green-dark"] {
+  --text: #e8f7ea;
+  --background: #07190a;
+  --primary: #83e793;
+  --secondary: #139929;
+  --accent: #1df03f;
+}
+
+:root[data-theme="light"] {
+  --text: #14151a;
+  --background: #edeef2;
+  --primary: #404659;
+  --secondary: #baa1b5;
+  --accent: #916976;
+}
+:root[data-theme="dark"] {
+  --text: #e5e6eb;
+  --background: #0d0e12;
+  --primary: #a6acbf;
+  --secondary: #5e4559;
+  --accent: #966e7b;
+}
+
+*{
+    font-family: 'Kode Mono';
+    color: var(--primary);
+    background-color: var(--background);
+    font-size: 1rem;
+}
+
+input {
+    border: none; /* or border: 0; */
+    color: var(--accent);
+}
+
+input:focus {
+    outline: none;
+}
+label, .question{
+    color: var(--accent);
+}
+
+.error{
+    color: red;
+}
+
+.answer{
+    color: var(--primary)
+}
